@@ -68,7 +68,7 @@ export function DemoSection() {
             className="relative mx-auto max-w-5xl"
           >
             {/* Display Mockup */}
-            <div className="relative rounded-xl border-[6px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-charcoal shadow-2xl shadow-primary/20 overflow-hidden">
+            <div className="relative rounded-xl border-[6px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-slate-50 dark:bg-zinc-900 shadow-2xl shadow-primary/20 overflow-hidden">
                 
                 <TabsContent value="pedidos" className="mt-0 p-0">
                   <div className="min-h-[400px] md:min-h-[500px]">
