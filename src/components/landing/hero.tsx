@@ -110,19 +110,8 @@ export function Hero() {
                 </div>
                 <div className="flex-1 bg-muted rounded" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
             </div>
-            {/* Memorable element: A small floating badge */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 bg-primary text-white p-4 rounded-full shadow-xl hidden sm:block"
-            >
-              <div className="text-center">
-                <span className="block text-2xl font-bold">100%</span>
-                <span className="text-[10px] uppercase font-bold">Cloud</span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
