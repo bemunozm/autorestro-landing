@@ -47,13 +47,17 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Custom colors from palette */
+  /* Custom colors from palette — full names */
   --color-purple-primary: #7B5EA7;
   --color-golden-accent: #D4A017;
   --color-charcoal: #1A1A1A;
   --color-off-white: #FAFAFA;
   --color-near-black: #0F0F0F;
   --color-muted-text: #6B7280;
+
+  /* Aliases (shortnames used by components) */
+  --color-purple: #7B5EA7;
+  --color-golden: #D4A017;
 }
 
 :root {
