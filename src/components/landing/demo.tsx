@@ -64,27 +64,31 @@ export function DemoSection() {
             className="relative mx-auto max-w-5xl"
           >
             {/* Display Mockup */}
-            <div className="relative rounded-[2.5rem] border-[12px] border-charcoal bg-charcoal p-2 shadow-2xl shadow-primary/20 aspect-[16/10] md:aspect-video overflow-hidden">
-              <div className="absolute inset-0 bg-off-white dark:bg-near-black overflow-hidden">
+            <div className="relative rounded-[2rem] border-[10px] border-charcoal bg-charcoal shadow-2xl shadow-primary/20 overflow-hidden">
                 
-                <TabsContent value="pedidos" className="mt-0 h-full p-0">
-                  <PedidosShowcase />
+                <TabsContent value="pedidos" className="mt-0 p-0">
+                  <div className="min-h-[400px] md:min-h-[500px]">
+                    <PedidosShowcase />
+                  </div>
                 </TabsContent>
                 
-                <TabsContent value="cocina" className="mt-0 h-full p-0">
-                  <CocinaShowcase />
+                <TabsContent value="cocina" className="mt-0 p-0">
+                  <div className="min-h-[400px] md:min-h-[500px]">
+                    <CocinaShowcase />
+                  </div>
                 </TabsContent>
                 
-                <TabsContent value="analytics" className="mt-0 h-full p-0">
-                  <AnalyticsShowcase />
+                <TabsContent value="analytics" className="mt-0 p-0">
+                  <div className="min-h-[400px] md:min-h-[500px]">
+                    <AnalyticsShowcase />
+                  </div>
                 </TabsContent>
 
-              </div>
             </div>
             
             {/* Stand effect */}
-            <div className="h-6 w-1/3 bg-charcoal/90 rounded-b-3xl mx-auto mt-[-4px]" />
-            <div className="h-1.5 w-1/2 bg-charcoal/40 rounded-full mx-auto mt-4" />
+            <div className="h-5 w-1/3 bg-charcoal/80 rounded-b-2xl mx-auto" />
+            <div className="h-1 w-1/5 bg-charcoal/30 rounded-full mx-auto mt-2" />
           </motion.div>
         </Tabs>
 
@@ -112,9 +116,9 @@ export function DemoSection() {
 
 function PedidosShowcase() {
   return (
-    <div className="h-full w-full flex bg-slate-50 dark:bg-slate-950 p-4 md:p-8 items-center justify-center gap-8">
+    <div className="w-full flex bg-slate-50 dark:bg-slate-950 p-4 md:p-8 items-center justify-center gap-8">
        {/* Phone Mockup */}
-       <div className="w-[240px] h-[480px] bg-charcoal rounded-[3rem] border-[8px] border-charcoal shadow-2xl overflow-hidden relative hidden md:block scale-90">
+       <div className="w-[240px] h-[400px] bg-charcoal rounded-[3rem] border-[8px] border-charcoal shadow-2xl overflow-hidden relative hidden md:block flex-shrink-0">
          <div className="h-full w-full bg-white flex flex-col p-4">
            <div className="flex justify-between items-center mb-6">
              <div className="w-10 h-10 rounded-full bg-purple/10 flex items-center justify-center">
@@ -178,7 +182,7 @@ function PedidosShowcase() {
 
 function CocinaShowcase() {
   return (
-    <div className="h-full w-full flex bg-zinc-900 p-4 md:p-8 flex-col">
+    <div className="w-full flex bg-zinc-900 p-4 md:p-8 flex-col">
        <div className="flex justify-between items-center mb-6 text-white border-b border-zinc-800 pb-4">
          <div className="flex items-center gap-3">
            <ChefHat className="w-6 h-6 text-golden" />
@@ -228,7 +232,7 @@ function CocinaShowcase() {
 
 function AnalyticsShowcase() {
   return (
-    <div className="h-full w-full bg-slate-50 dark:bg-slate-950 p-6 md:p-10">
+    <div className="w-full bg-slate-50 dark:bg-slate-950 p-6 md:p-10">
        <div className="flex items-center gap-4 mb-8">
          <div className="w-12 h-12 rounded-2xl bg-purple/10 flex items-center justify-center">
             <TrendingUp className="w-6 h-6 text-purple" />
