@@ -85,74 +85,66 @@ export function DemoSection() {
             className="relative mx-auto max-w-5xl"
           >
             {/* Display Mockup */}
-            <div className="relative rounded-xl border-[6px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-slate-50 dark:bg-zinc-900 shadow-2xl shadow-primary/20 overflow-hidden">
+            <div className="relative w-full rounded-xl border-[6px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-slate-50 dark:bg-zinc-900 shadow-2xl shadow-primary/20 overflow-hidden">
                 
-                <TabsContent value="pedidos" className="mt-0 p-0">
-                  <div className="aspect-video w-full overflow-hidden">
-                    <Player
-                      component={PedidosComposition}
-                      inputProps={{ theme }}
-                      durationInFrames={240}
-                      fps={30}
-                      compositionWidth={1920}
-                      compositionHeight={1080}
-                      loop
-                      autoPlay
-                      controls={false}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
+                <TabsContent value="pedidos" className="mt-0 p-0 w-full block">
+                  <Player
+                    component={PedidosComposition}
+                    inputProps={{ theme }}
+                    durationInFrames={240}
+                    fps={30}
+                    compositionWidth={1920}
+                    compositionHeight={1080}
+                    loop
+                    autoPlay
+                    controls={false}
+                    style={{ width: "100%" }}
+                  />
                 </TabsContent>
                 
-                <TabsContent value="cocina" className="mt-0 p-0">
-                  <div className="aspect-video w-full overflow-hidden">
-                    <Player
-                      component={CocinaComposition}
-                      inputProps={{ theme }}
-                      durationInFrames={300}
-                      fps={30}
-                      compositionWidth={1920}
-                      compositionHeight={1080}
-                      loop
-                      autoPlay
-                      controls={false}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
+                <TabsContent value="cocina" className="mt-0 p-0 w-full block">
+                  <Player
+                    component={CocinaComposition}
+                    inputProps={{ theme }}
+                    durationInFrames={300}
+                    fps={30}
+                    compositionWidth={1920}
+                    compositionHeight={1080}
+                    loop
+                    autoPlay
+                    controls={false}
+                    style={{ width: "100%" }}
+                  />
                 </TabsContent>
 
-                <TabsContent value="garzon" className="mt-0 p-0">
-                  <div className="aspect-video w-full overflow-hidden">
-                    <Player
-                      component={GarzonComposition}
-                      inputProps={{ theme }}
-                      durationInFrames={300}
-                      fps={30}
-                      compositionWidth={1920}
-                      compositionHeight={1080}
-                      loop
-                      autoPlay
-                      controls={false}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
+                <TabsContent value="garzon" className="mt-0 p-0 w-full block">
+                  <Player
+                    component={GarzonComposition}
+                    inputProps={{ theme }}
+                    durationInFrames={300}
+                    fps={30}
+                    compositionWidth={1920}
+                    compositionHeight={1080}
+                    loop
+                    autoPlay
+                    controls={false}
+                    style={{ width: "100%" }}
+                  />
                 </TabsContent>
                 
-                <TabsContent value="analytics" className="mt-0 p-0">
-                  <div className="aspect-video w-full overflow-hidden">
-                    <Player
-                      component={AnalyticsComposition}
-                      inputProps={{ theme }}
-                      durationInFrames={240}
-                      fps={30}
-                      compositionWidth={1920}
-                      compositionHeight={1080}
-                      loop
-                      autoPlay
-                      controls={false}
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
+                <TabsContent value="analytics" className="mt-0 p-0 w-full block">
+                  <Player
+                    component={AnalyticsComposition}
+                    inputProps={{ theme }}
+                    durationInFrames={240}
+                    fps={30}
+                    compositionWidth={1920}
+                    compositionHeight={1080}
+                    loop
+                    autoPlay
+                    controls={false}
+                    style={{ width: "100%" }}
+                  />
                 </TabsContent>
 
             </div>
