@@ -5,6 +5,10 @@ import { PromoVideo } from "@/components/landing/promo-video";
 import { ProblemSection } from "@/components/landing/problem";
 import { FeaturesSection } from "@/components/landing/features";
 import { DemoSection } from "@/components/landing/demo";
+import { TestimonialsSection } from "@/components/landing/testimonials";
+import { PricingSection } from "@/components/landing/pricing";
+import { FAQSection } from "@/components/landing/faq";
+import { FinalCTASection, Footer } from "@/components/landing/final-cta-footer";
 
 export default function Home() {
   return (
@@ -18,17 +22,11 @@ export default function Home() {
       <FeaturesSection />
       <DemoSection />
       
-      <footer className="py-12 px-4 border-t border-border bg-charcoal text-off-white dark:bg-near-black">
-        <div className="container mx-auto flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
-          <p className="text-sm font-medium">
-            © {new Date().getFullYear()} Auto-Restro. Todos los derechos reservados.
-          </p>
-          <div className="flex gap-8 text-sm font-bold uppercase tracking-widest text-muted-foreground">
-            <a href="#" className="hover:text-off-white transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-off-white transition-colors">Términos</a>
-          </div>
-        </div>
-      </footer>
+      <TestimonialsSection />
+      <PricingSection />
+      <FAQSection />
+      <FinalCTASection />
+      <Footer />
     </main>
   );
 }
