@@ -11,7 +11,7 @@ import { FinalCTASection, Footer } from "@/components/landing/final-cta-footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col pt-20">
       <Navbar />
       <Hero />
       <SocialProof />
