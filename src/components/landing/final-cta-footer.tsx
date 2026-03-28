@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Calendar, ShieldCheck, Zap, CreditCard, Share2, Globe, Mail } from "lucide-react";
@@ -11,7 +12,7 @@ export function FinalCTASection() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-white to-purple/10 dark:from-near-black dark:to-purple/5 relative overflow-hidden">
+    <section className="py-24 px-4 bg-gradient-to-b from-white to-purple/10 dark:from-near-black dark:to-purple/5 relative overflow-hidden border-t border-border/30">
       <div className="container mx-auto max-w-5xl text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -32,7 +33,7 @@ export function FinalCTASection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
             <Button
               onClick={() => setIsDialogOpen(true)}
-              className="w-full sm:w-auto h-16 px-10 text-xl font-bold rounded-2xl bg-golden hover:bg-golden/90 text-charcoal shadow-2xl shadow-golden/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-3"
+              className="w-full sm:w-auto h-16 px-10 text-xl font-bold rounded-2xl bg-[#D4A017] hover:bg-[#D4A017]/90 text-charcoal shadow-2xl shadow-golden/20 transition-all hover:scale-105 active:scale-95 flex items-center gap-3 border-none"
             >
               <MessageCircle size={24} className="fill-charcoal" />
               Empieza ahora
@@ -81,9 +82,15 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1 space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-purple rounded-xl flex items-center justify-center font-bold text-xl shadow-lg shadow-purple/30">
-                A
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white flex items-center justify-center shadow-lg shadow-purple/30">
+                <Image 
+                  src="/auto-restro.png" 
+                  alt="Auto-Restro Logo" 
+                  width={32} 
+                  height={32}
+                  className="object-contain"
+                />
               </div>
               <span className="text-2xl font-heading font-extrabold tracking-tighter">Auto-Restro</span>
             </div>

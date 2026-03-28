@@ -166,10 +166,10 @@ export function PricingSection() {
                 <CardFooter className="p-8 pt-0 mt-auto flex flex-col gap-4">
                   <Button
                     onClick={() => handleCTA(p.name)}
-                    className={`w-full h-14 rounded-2xl text-lg font-bold transition-all active:scale-95 ${
+                    className={`w-full h-14 rounded-2xl text-lg font-bold transition-all active:scale-95 border-none ${
                       p.popular 
-                        ? "bg-golden hover:bg-golden/90 text-charcoal" 
-                        : "bg-charcoal hover:bg-charcoal/90 text-off-white dark:bg-off-white dark:text-charcoal dark:hover:bg-off-white/90"
+                        ? "bg-[#D4A017] hover:bg-[#D4A017]/90 text-charcoal shadow-xl shadow-golden/20" 
+                        : "bg-charcoal hover:bg-charcoal/90 text-off-white dark:bg-off-white dark:text-charcoal dark:hover:bg-off-white/90 border border-border/50 shadow-lg"
                     }`}
                   >
                     {p.cta}

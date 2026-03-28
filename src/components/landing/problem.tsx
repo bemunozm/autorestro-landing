@@ -28,8 +28,7 @@ const painPoints = [
 
 export function ProblemSection() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-background">
-      {/* Subtle background gradient as per Benjamin's directive */}
+    <section className="py-24 px-6 relative overflow-hidden bg-muted/30 dark:bg-near-black/50 border-y border-border/50">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(123,94,167,0.03)_0%,transparent_70%)] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto relative z-10">

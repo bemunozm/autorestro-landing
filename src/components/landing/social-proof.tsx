@@ -1,15 +1,15 @@
 "use client";
 
-import { Star } from "lucide-react";
+import { Star, UtensilsCrossed, ChefHat, Coffee, Pizza, Wine, Soup } from "lucide-react";
 import { motion } from "framer-motion";
 
 const brands = [
-  "Resto 1",
-  "Resto 2",
-  "Resto 3",
-  "Resto 4",
-  "Resto 5",
-  "Resto 6",
+  { name: "La Picada", icon: UtensilsCrossed },
+  { name: "Don Gourmet", icon: ChefHat },
+  { name: "Coffee Break", icon: Coffee },
+  { name: "Pizza Nostra", icon: Pizza },
+  { name: "Wine Bar", icon: Wine },
+  { name: "Sopa & Más", icon: Soup },
 ];
 
 export function SocialProof() {
@@ -20,7 +20,7 @@ export function SocialProof() {
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <div className="flex items-center">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="h-4 w-4 fill-golden-accent text-golden-accent" />
+                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
             <span className="text-sm font-bold tracking-tight">
@@ -36,14 +36,15 @@ export function SocialProof() {
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 grayscale opacity-50 dark:invert dark:opacity-40">
               {brands.map((brand, i) => (
                 <motion.div
-                  key={brand}
+                  key={brand.name}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-center justify-center h-10 px-4 border-2 border-transparent hover:border-border transition-all cursor-default"
+                  className="flex flex-col items-center justify-center gap-2 px-4 hover:opacity-100 transition-all cursor-default group"
                 >
-                  <span className="text-xl font-heading font-black tracking-tighter uppercase italic">
-                    {brand}
+                  <brand.icon className="w-8 h-8 mb-1 transition-transform group-hover:scale-110" />
+                  <span className="text-xs font-bold uppercase tracking-wider">
+                    {brand.name}
                   </span>
                 </motion.div>
               ))}

@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
-import { PromoVideo } from "@/components/landing/promo-video";
 import { ProblemSection } from "@/components/landing/problem";
 import { FeaturesSection } from "@/components/landing/features";
 import { DemoSection } from "@/components/landing/demo";
@@ -16,7 +15,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialProof />
-      <PromoVideo />
       
       <ProblemSection />
       <FeaturesSection />
