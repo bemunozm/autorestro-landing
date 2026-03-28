@@ -2,6 +2,9 @@ import { Navbar } from "@/components/landing/navbar";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
 import { PromoVideo } from "@/components/landing/promo-video";
+import { ProblemSection } from "@/components/landing/problem";
+import { FeaturesSection } from "@/components/landing/features";
+import { DemoSection } from "@/components/landing/demo";
 
 export default function Home() {
   return (
@@ -11,12 +14,9 @@ export default function Home() {
       <SocialProof />
       <PromoVideo />
       
-      {/* Empty space for next sprints */}
-      <section className="flex-1 min-h-[50vh] flex items-center justify-center p-8 bg-background border-t border-border">
-        <p className="text-muted-foreground italic font-medium">
-          Sprint 2 content: Características, Precios y Demo...
-        </p>
-      </section>
+      <ProblemSection />
+      <FeaturesSection />
+      <DemoSection />
       
       <footer className="py-12 px-4 border-t border-border bg-charcoal text-off-white dark:bg-near-black">
         <div className="container mx-auto flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">

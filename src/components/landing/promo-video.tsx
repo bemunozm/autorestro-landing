@@ -1,6 +1,5 @@
 "use client";
 
-import { Player } from "@remotion/player";
 import { motion } from "framer-motion";
 
 // Placeholder component for Remotion
