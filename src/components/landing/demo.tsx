@@ -21,13 +21,22 @@ import { AnalyticsComposition } from "../remotion/analytics-comp";
 
 export function DemoSection() {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const theme = resolvedTheme === "dark" ? "dark" : "light";
+  
+  // Dimensions based on aspect ratio
+  const compWidth = isMobile ? 1080 : 1920;
+  const compHeight = isMobile ? 1920 : 1080;
 
   if (!mounted) {
     return (
@@ -85,65 +94,65 @@ export function DemoSection() {
             className="relative mx-auto max-w-5xl"
           >
             {/* Display Mockup */}
-            <div className="relative w-full rounded-xl border-[6px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-slate-50 dark:bg-zinc-900 shadow-2xl shadow-primary/20 overflow-hidden">
+            <div className="relative w-full aspect-[9/16] md:aspect-video rounded-[3rem] border-[12px] md:rounded-[2rem] md:border-[10px] border-charcoal bg-slate-50 dark:bg-zinc-900 shadow-2xl shadow-primary/20 overflow-hidden">
                 
-                <TabsContent value="pedidos" className="mt-0 p-0 w-full block">
+                <TabsContent value="pedidos" className="mt-0 p-0 w-full h-full block">
                   <Player
                     component={PedidosComposition}
                     inputProps={{ theme }}
                     durationInFrames={240}
                     fps={30}
-                    compositionWidth={1920}
-                    compositionHeight={1080}
+                    compositionWidth={compWidth}
+                    compositionHeight={compHeight}
                     loop
                     autoPlay
                     controls={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </TabsContent>
                 
-                <TabsContent value="cocina" className="mt-0 p-0 w-full block">
+                <TabsContent value="cocina" className="mt-0 p-0 w-full h-full block">
                   <Player
                     component={CocinaComposition}
                     inputProps={{ theme }}
                     durationInFrames={300}
                     fps={30}
-                    compositionWidth={1920}
-                    compositionHeight={1080}
+                    compositionWidth={compWidth}
+                    compositionHeight={compHeight}
                     loop
                     autoPlay
                     controls={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </TabsContent>
 
-                <TabsContent value="garzon" className="mt-0 p-0 w-full block">
+                <TabsContent value="garzon" className="mt-0 p-0 w-full h-full block">
                   <Player
                     component={GarzonComposition}
                     inputProps={{ theme }}
                     durationInFrames={300}
                     fps={30}
-                    compositionWidth={1920}
-                    compositionHeight={1080}
+                    compositionWidth={compWidth}
+                    compositionHeight={compHeight}
                     loop
                     autoPlay
                     controls={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </TabsContent>
                 
-                <TabsContent value="analytics" className="mt-0 p-0 w-full block">
+                <TabsContent value="analytics" className="mt-0 p-0 w-full h-full block">
                   <Player
                     component={AnalyticsComposition}
                     inputProps={{ theme }}
                     durationInFrames={240}
                     fps={30}
-                    compositionWidth={1920}
-                    compositionHeight={1080}
+                    compositionWidth={compWidth}
+                    compositionHeight={compHeight}
                     loop
                     autoPlay
                     controls={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </TabsContent>
 
