@@ -57,7 +57,7 @@ export function DemoSection() {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="pedidos" className="w-full">
+        <Tabs defaultValue="pedidos" className="w-full [&]:block">
           <TabsList className="grid w-full grid-cols-4 mb-12 max-w-3xl mx-auto h-auto p-1 bg-muted/50 rounded-2xl border border-border/50 backdrop-blur-sm">
             <TabsTrigger value="pedidos" className="flex items-center justify-center gap-2 py-4 rounded-xl data-[state=active]:bg-background data-[state=active]:shadow-lg transition-all">
               <Smartphone className="w-5 h-5 text-purple" />
