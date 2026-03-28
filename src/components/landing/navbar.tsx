@@ -26,20 +26,18 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-md" style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center space-x-3 transition-transform hover:scale-105">
-              <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white flex items-center justify-center shadow-lg shadow-purple/10">
-                <Image 
-                  src="/auto-restro.png" 
-                  alt="Auto-Restro Logo" 
-                  width={40} 
-                  height={40}
-                  className="object-contain p-1"
-                />
-              </div>
+              <Image 
+                src="/auto-restro.png" 
+                alt="Auto-Restro Logo" 
+                width={44} 
+                height={44}
+                className="object-contain"
+              />
               <span className="hidden font-heading text-2xl font-bold sm:inline-block tracking-tight text-charcoal dark:text-off-white">
                 Auto-Restro
               </span>
@@ -94,15 +92,8 @@ export function Navbar() {
               />
               <SheetContent side="right" className="w-full sm:w-[400px] p-0 border-l-0">
                 <div className="flex flex-col h-full bg-background">
-                  <div className="p-6 border-b border-border/50 flex justify-between items-center">
+                  <div className="p-6 border-b border-border/50">
                     <SheetTitle className="font-heading text-2xl font-bold">Menú</SheetTitle>
-                    <SheetClose
-                      render={
-                        <Button variant="ghost" size="icon" className="rounded-full">
-                          <X className="h-6 w-6" />
-                        </Button>
-                      }
-                    />
                   </div>
                   
                   <div className="flex-1 overflow-y-auto p-6">
